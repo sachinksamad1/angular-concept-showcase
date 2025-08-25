@@ -1,59 +1,91 @@
-# AngularConceptShowcase
+# Angular Concepts Showcase 🚀
+This project is a beginner-friendly mini-application designed to demonstrate a wide range of core and advanced Angular concepts. Each concept is isolated within its own dedicated component, making it easy to understand and explore the specific code for each feature.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+## ✨ Core Concepts Covered
+This showcase provides hands-on examples for the following Angular features:
 
-## Development server
+ 1. Templates and Content Projection
 
-To start a local development server, run:
+      - `ng-template`: Defining reusable template blocks.
 
-```bash
+      - `ng-container`: A grouping element that doesn't render in the DOM.
+
+      - `ng-content`: Projecting content from a parent component (Content Projection).
+
+      - `NgTemplateOutlet`: Dynamically rendering templates.
+
+ 2. Directives
+
+    - Structural Directives: `*ngIf` and `*ngFor`.
+
+    - Attribute Directives: Custom directives using `HostBinding` and `HostListener` to manipulate host element properties and listen to events.
+
+ 3. Component Interaction & Queries
+
+    - View Queries: Accessing child components defined in a component's own template using @ViewChild and @ViewChildren.
+
+    - Content Queries: Accessing child components projected into a component using @ContentChild and @ContentChildren.
+
+ 4. DOM Manipulation
+    - Renderer2: A safe, platform-agnostic API for manipulating DOM elements.
+
+    - ElementRef: A wrapper around a native element to be used with Renderer2.
+
+ 5. Dynamic Component Loading
+
+    - ViewContainerRef: A container where components can be dynamically attached.
+
+    - Dynamically creating and rendering components at runtime without defining them in the template.
+
+ 6. Change Detection
+
+    - ChangeDetectionStrategy.OnPush: Using the OnPush strategy for performance optimisation.
+
+    - ChangeDetectorRef: Manually triggering change detection within OnPush components.
+
+## 📂 Project Structure
+The project is organized by feature into distinct components, allowing you to easily navigate to the concept you're interested in.
+
+```
+/src/app/
+|
+├── components/template-projection/    # Demos ng-content, ng-template, etc.
+├── components/directives-demo/        # Demos *ngIf, *ngFor, and custom directives.
+├── components/queries-demo/           # Demos @ViewChild and @ViewChildren.
+├── components/dom-manipulation/       # Demos Renderer2 and ElementRef.
+├── components/dynamic-loader/         # Demos dynamic component loading.
+├── components/change-detection/       # Demos ChangeDetectorRef with OnPush.
+└── ... and more
+```
+
+## 🛠️ Setup and Installation
+Follow these steps to run the project locally on your machine.
+
+Clone the repository:
+
+```
+git clone https://github.com/sachinksamad1/angular-concept-showcase.git
+cd angular-concepts-showcase
+```
+
+Install dependencies:
+```
+npm install
+```
+
+Run the development server:
+```
 ng serve
 ```
+Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📖 How to Use
+Once the application is running, open your browser to http://localhost:4200. Each numbered section on the page corresponds to one of the core concepts listed above.
 
-## Code scaffolding
+To understand how a feature works:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Interact with the UI in the browser.
 
-```bash
-ng generate component component-name
-```
+Open the corresponding component's folder in your code editor (e.g., `src/app/components/directives-demo/`).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Examine the .ts (TypeScript) and .html files to see the implementation. Browser developer tools are also useful for inspecting the console logs and DOM changes.
