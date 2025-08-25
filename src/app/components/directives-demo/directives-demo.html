@@ -1,0 +1,13 @@
+<h3>2. Directives</h3>
+
+<h4>*ngIf</h4>
+<button (click)="isVisible = !isVisible">Toggle Visibility</button>
+<p *ngIf="isVisible">This paragraph is now visible.</p>
+
+<h4>*ngFor</h4>
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<h4>Custom Attribute Directive (HostBinding & HostListener)</h4>
+<p appHighlight>Hover over me to highlight!</p>
